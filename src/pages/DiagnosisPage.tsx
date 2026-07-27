@@ -17,11 +17,14 @@ import styles from './DiagnosisPage.module.css'
 type SeverityFilter = 'all' | Severity
 type RefreshSeconds = '30' | '60' | '300'
 
-const taskStatus: Record<TaskStatus, { label: string; tone: string }> = {
-  pending: { label: '待处理', tone: 'pending' },
-  processing: { label: '处理中', tone: 'processing' },
-  completed: { label: '已销项', tone: 'completed' },
-  cancelled: { label: '已取消', tone: 'cancelled' },
+const taskStatus: Record<
+  TaskStatus,
+  { label: string; tone: string; color: string }
+> = {
+  pending: { label: '待处理', tone: 'pending', color: '#2D7FB3' },
+  processing: { label: '处理中', tone: 'processing', color: '#D58A32' },
+  completed: { label: '已销项', tone: 'completed', color: '#3F9A61' },
+  cancelled: { label: '已取消', tone: 'cancelled', color: '#8797A3' },
 }
 
 export default function DiagnosisPage() {
@@ -289,7 +292,9 @@ export default function DiagnosisPage() {
                       <span>DISPATCH TRACKING</span>
                       <h2>任务派发跟踪</h2>
                     </div>
-                    <span className={styles.taskCount}>3 项任务</span>
+                    <span className={styles.taskCount}>
+                      {data.tasks.length} 项任务
+                    </span>
                   </header>
 
                   <div className={styles.taskList}>
@@ -310,6 +315,7 @@ export default function DiagnosisPage() {
                             percent={task.progress}
                             showInfo={false}
                             size="small"
+                            strokeColor={status.color}
                             status={
                               task.status === 'completed' ? 'success' : 'active'
                             }
