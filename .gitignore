@@ -1,0 +1,22 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# Logs and local environment
+*.log
+.env
+.env.*
+!.env.example
+
+# Editor and operating system
+.DS_Store
+.idea/
+.vscode/
+
+# Local agent planning and progress
+/task_plan.md
+/findings.md
+/progress.md
+/docs/superpowers/
+
