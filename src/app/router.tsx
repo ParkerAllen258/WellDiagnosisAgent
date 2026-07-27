@@ -1,5 +1,6 @@
 import { Navigate, type RouteObject } from 'react-router-dom'
 import { AppShell } from '../layout/AppShell'
+import DiagnosisPage from '../pages/DiagnosisPage'
 import { NotFoundPage } from '../pages/NotFoundPage'
 import OverviewPage from '../pages/OverviewPage'
 
@@ -12,7 +13,7 @@ export const appRoutes: RouteObject[] = [
     children: [
       { index: true, element: <Navigate to="/overview" replace /> },
       { path: 'overview', element: <OverviewPage /> },
-      { path: 'diagnosis', element: placeholder('异常诊断') },
+      { path: 'diagnosis', element: <DiagnosisPage /> },
       { path: 'optimization', element: placeholder('洗井优化') },
       { path: 'tasks', element: placeholder('任务派发') },
       { path: 'rules', element: placeholder('规则库管理') },
