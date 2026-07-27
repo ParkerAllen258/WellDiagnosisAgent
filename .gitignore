@@ -15,8 +15,8 @@ coverage/
 .vscode/
 
 # Local agent planning and progress
+/AGENTS.md
 /task_plan.md
 /findings.md
 /progress.md
 /docs/superpowers/
-
