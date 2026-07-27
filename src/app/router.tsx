@@ -1,6 +1,7 @@
 import { Navigate, type RouteObject } from 'react-router-dom'
 import { AppShell } from '../layout/AppShell'
 import DiagnosisPage from '../pages/DiagnosisPage'
+import KnowledgePage from '../pages/KnowledgePage'
 import { NotFoundPage } from '../pages/NotFoundPage'
 import OptimizationPage from '../pages/OptimizationPage'
 import OverviewPage from '../pages/OverviewPage'
@@ -20,7 +21,7 @@ export const appRoutes: RouteObject[] = [
       { path: 'optimization', element: <OptimizationPage /> },
       { path: 'tasks', element: <TasksPage /> },
       { path: 'rules', element: <RulesPage /> },
-      { path: 'knowledge', element: placeholder('知识学习') },
+      { path: 'knowledge', element: <KnowledgePage /> },
       { path: 'settings', element: placeholder('系统设置') },
       { path: '*', element: <NotFoundPage /> },
     ],
