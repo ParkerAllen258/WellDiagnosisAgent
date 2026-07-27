@@ -41,7 +41,6 @@ export default function SettingsPage() {
   const [error, setError] = useState<string | null>(null)
   const [reloadKey, setReloadKey] = useState(0)
   const [dirty, setDirty] = useState(false)
-  const [form] = Form.useForm<SettingsFormValues>()
   const [messageApi, messageContext] = message.useMessage()
   const blocker = useBlocker(dirty)
 
@@ -52,15 +51,6 @@ export default function SettingsPage() {
       .then((result) => {
         if (cancelled) return
         setSettings(result)
-        form.setFieldsValue({
-          dataSource: result.dataSource,
-          model: {
-            primary: result.model.primary,
-            confidencePercent: result.model.confidenceThreshold * 100,
-          },
-          notifications: result.notifications,
-          appearance: result.appearance,
-        })
         setDirty(false)
         setError(null)
       })
@@ -74,7 +64,7 @@ export default function SettingsPage() {
     return () => {
       cancelled = true
     }
-  }, [form, reloadKey])
+  }, [reloadKey])
 
   useEffect(() => {
     if (!dirty) return
@@ -272,8 +262,9 @@ export default function SettingsPage() {
             </span>
             <Button
               disabled={!dirty}
+              form="settings-form"
+              htmlType="submit"
               type="primary"
-              onClick={() => form.submit()}
             >
               保存设置
             </Button>
@@ -293,7 +284,16 @@ export default function SettingsPage() {
       >
         <Form
           className={styles.settingsForm}
-          form={form}
+          id="settings-form"
+          initialValues={{
+            dataSource: settings?.dataSource,
+            model: {
+              primary: settings?.model.primary,
+              confidencePercent: (settings?.model.confidenceThreshold ?? 0) * 100,
+            },
+            notifications: settings?.notifications,
+            appearance: settings?.appearance,
+          }}
           layout="vertical"
           onFinish={saveSettings}
           onValuesChange={() => setDirty(true)}

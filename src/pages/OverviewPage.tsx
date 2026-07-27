@@ -246,14 +246,14 @@ export default function OverviewPage() {
                 <div className={styles.chart}>
                   <Bar
                     data={ranking}
-                    xField="score"
-                    yField="name"
+                    xField="name"
+                    yField="score"
                     colorField="region"
                     height={210}
                     axis={{ x: { title: false }, y: { title: false } }}
                     scale={{
                       color: { range: ['#2D7FB3', '#3F9A61'] },
-                      x: { domain: [0, 100] },
+                      y: { domain: [0, 100] },
                     }}
                     legend={false}
                   />
