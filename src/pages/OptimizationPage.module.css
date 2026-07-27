@@ -1,0 +1,240 @@
+.page {
+  min-height: calc(100vh - var(--topbar-height) - 52px);
+}
+
+.wellSelector {
+  display: grid;
+  gap: 4px;
+}
+
+.wellSelector span {
+  color: #718492;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.wellSelector select {
+  min-width: 144px;
+  height: 32px;
+  padding: 0 28px 0 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-text);
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: 1.28fr 4fr;
+  min-height: 118px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  border: 1px solid rgb(54 111 148 / 30%);
+  border-radius: var(--radius-card);
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 10% 50%, rgb(70 149 194 / 25%), transparent 31%),
+    linear-gradient(105deg, #123b5a, #174f73);
+  box-shadow: 0 6px 18px rgb(18 59 90 / 14%);
+}
+
+.summaryIdentity {
+  display: grid;
+  align-content: center;
+  padding: 17px 20px;
+  border-right: 1px solid rgb(255 255 255 / 11%);
+}
+
+.summaryIdentity > span {
+  color: rgb(221 238 248 / 62%);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.summaryIdentity > div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.summaryIdentity strong {
+  font-size: 25px;
+  font-variant-numeric: tabular-nums;
+}
+
+.summaryIdentity p {
+  margin: 3px 0 0;
+  color: rgb(224 238 246 / 58%);
+  font-size: 9px;
+}
+
+.summary > dl {
+  display: grid;
+  grid-template-columns: 1.35fr repeat(4, 1fr);
+  margin: 0;
+}
+
+.summary > dl > div {
+  display: grid;
+  align-content: center;
+  padding: 12px 16px;
+}
+
+.summary dt {
+  color: rgb(220 237 246 / 59%);
+  font-size: 9px;
+}
+
+.summary dd {
+  margin: 5px 0 0;
+  font-size: 15px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.summary .benefit {
+  color: #8be0aa;
+}
+
+.chartGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.panel,
+.planSection {
+  padding: 15px 16px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: #ffffff;
+  box-shadow: var(--shadow-card);
+}
+
+.panel > header,
+.sectionHeader {
+  display: flex;
+  min-height: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.panel header span,
+.sectionHeader span {
+  display: block;
+  margin-bottom: 2px;
+  color: #91a1ac;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.panel h2,
+.sectionHeader h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.panel header small {
+  color: #8495a1;
+  font-size: 9px;
+}
+
+.chart {
+  min-height: 230px;
+}
+
+.planSection {
+  margin-bottom: 12px;
+}
+
+.sectionHeader p {
+  margin: 0;
+  color: #83939e;
+  font-size: 10px;
+}
+
+.planGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.planCard {
+  padding: 14px;
+  border: 1px solid #dbe6ed;
+  border-radius: 7px;
+  background:
+    linear-gradient(180deg, #f8fbfd 0%, #ffffff 40%);
+}
+
+.planHeading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.planHeading span {
+  color: #94a2ac;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.planHeading h3 {
+  margin: 2px 0 0;
+  color: #2c4a60;
+  font-size: 13px;
+}
+
+.planWindow {
+  display: block;
+  margin: 13px 0 11px;
+  color: var(--color-primary);
+  font-size: 17px;
+  font-variant-numeric: tabular-nums;
+}
+
+.planCard dl {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 0 13px;
+  padding: 9px 0;
+  border-block: 1px solid #e9eff3;
+}
+
+.planCard dl > div + div {
+  border-left: 1px solid #e9eff3;
+  padding-left: 10px;
+}
+
+.planCard dt {
+  color: #8a99a4;
+  font-size: 8px;
+}
+
+.planCard dd {
+  margin: 4px 0 0;
+  color: #405d71;
+  font-size: 10px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 1320px) {
+  .summary {
+    grid-template-columns: 1.1fr 4fr;
+  }
+
+  .summary > dl > div {
+    padding-inline: 10px;
+  }
+}
