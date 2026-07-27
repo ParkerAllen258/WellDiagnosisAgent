@@ -1,0 +1,14 @@
+:root {
+  --color-navy: #123b5a;
+  --color-primary: #2d7fb3;
+  --color-success: #3f9a61;
+  --color-warning: #d58a32;
+  --color-error: #c8524a;
+  --color-workspace: #edf3f8;
+  --color-text: #17364d;
+  --color-border: #d9e5ed;
+  --topbar-height: 58px;
+  --sidebar-width: 168px;
+  --radius-card: 8px;
+  --shadow-card: 0 3px 14px rgb(24 64 91 / 7%);
+}
