@@ -6,9 +6,8 @@ import { NotFoundPage } from '../pages/NotFoundPage'
 import OptimizationPage from '../pages/OptimizationPage'
 import OverviewPage from '../pages/OverviewPage'
 import RulesPage from '../pages/RulesPage'
+import SettingsPage from '../pages/SettingsPage'
 import TasksPage from '../pages/TasksPage'
-
-const placeholder = (title: string) => <h1>{title}</h1>
 
 export const appRoutes: RouteObject[] = [
   {
@@ -22,7 +21,7 @@ export const appRoutes: RouteObject[] = [
       { path: 'tasks', element: <TasksPage /> },
       { path: 'rules', element: <RulesPage /> },
       { path: 'knowledge', element: <KnowledgePage /> },
-      { path: 'settings', element: placeholder('系统设置') },
+      { path: 'settings', element: <SettingsPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },
