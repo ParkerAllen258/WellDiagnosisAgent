@@ -1,0 +1,154 @@
+.page {
+  min-height: calc(100vh - var(--topbar-height) - 52px);
+}
+
+.headerActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.saveState {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  padding: 0 9px;
+  border: 1px solid #cfe0ea;
+  border-radius: 4px;
+  color: #547285;
+  background: #f3f8fa;
+  font-size: 10px;
+}
+
+.saveState[data-dirty='true'] {
+  border-color: #edd0a5;
+  color: #9b651f;
+  background: #fff7e9;
+}
+
+.settingsForm {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: #ffffff;
+  box-shadow: var(--shadow-card);
+}
+
+.tabs :global(.ant-tabs-nav) {
+  margin: 0;
+  padding: 0 20px;
+  background:
+    linear-gradient(90deg, rgb(45 127 179 / 6%), transparent 50%),
+    #f7fafc;
+}
+
+.tabs :global(.ant-tabs-tab) {
+  min-width: 118px;
+  justify-content: center;
+  padding-block: 16px;
+  color: #60798a;
+  font-size: 12px;
+}
+
+.tabs :global(.ant-tabs-tab-active) {
+  font-weight: 650;
+}
+
+.tabs :global(.ant-tabs-content-holder) {
+  min-height: 430px;
+}
+
+.settingSection {
+  max-width: 920px;
+  padding: 28px 30px 34px;
+}
+
+.settingSection > header {
+  padding: 0 0 18px 15px;
+  border-left: 3px solid var(--color-primary);
+}
+
+.settingSection > header span {
+  display: block;
+  margin-bottom: 5px;
+  color: #7d93a2;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.settingSection > header h2 {
+  margin: 0;
+  color: #173c57;
+  font-size: 19px;
+}
+
+.settingSection > header p {
+  margin: 6px 0 0;
+  color: #718695;
+  font-size: 11px;
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: minmax(420px, 1fr) 220px;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.fieldGrid :global(.ant-input-number) {
+  width: 100%;
+}
+
+.note {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border: 1px solid #dce8ef;
+  border-radius: 5px;
+  color: #6e8392;
+  background: #f7fafc;
+  font-size: 10px;
+}
+
+.switchList {
+  display: grid;
+  gap: 0;
+  max-width: 720px;
+  margin-top: 22px;
+  border: 1px solid #dce7ed;
+  border-radius: 7px;
+}
+
+.switchList :global(.ant-form-item) {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 15px 18px;
+}
+
+.switchList :global(.ant-form-item + .ant-form-item) {
+  border-top: 1px solid #e8eef2;
+}
+
+.switchList :global(.ant-form-item-row) {
+  width: 100%;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switchList :global(.ant-form-item-label) {
+  padding: 0;
+}
+
+.switchList :global(.ant-form-item-control) {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 1280px) {
+  .fieldGrid {
+    grid-template-columns: minmax(360px, 1fr) 200px;
+  }
+}
