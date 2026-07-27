@@ -4,6 +4,7 @@ import DiagnosisPage from '../pages/DiagnosisPage'
 import { NotFoundPage } from '../pages/NotFoundPage'
 import OptimizationPage from '../pages/OptimizationPage'
 import OverviewPage from '../pages/OverviewPage'
+import RulesPage from '../pages/RulesPage'
 import TasksPage from '../pages/TasksPage'
 
 const placeholder = (title: string) => <h1>{title}</h1>
@@ -18,7 +19,7 @@ export const appRoutes: RouteObject[] = [
       { path: 'diagnosis', element: <DiagnosisPage /> },
       { path: 'optimization', element: <OptimizationPage /> },
       { path: 'tasks', element: <TasksPage /> },
-      { path: 'rules', element: placeholder('规则库管理') },
+      { path: 'rules', element: <RulesPage /> },
       { path: 'knowledge', element: placeholder('知识学习') },
       { path: 'settings', element: placeholder('系统设置') },
       { path: '*', element: <NotFoundPage /> },

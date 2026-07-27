@@ -1,0 +1,200 @@
+.page {
+  min-height: calc(100vh - var(--topbar-height) - 52px);
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.rulePanel {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: #ffffff;
+  box-shadow: var(--shadow-card);
+}
+
+.panelHeader {
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 16px 9px 19px;
+  border-bottom: 1px solid #e5edf2;
+  box-shadow: inset 3px 0 var(--color-primary);
+  background:
+    linear-gradient(90deg, rgb(45 127 179 / 7%), transparent 43%),
+    #ffffff;
+}
+
+.panelHeader span {
+  display: block;
+  margin-bottom: 2px;
+  color: #8397a6;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.panelHeader h2 {
+  margin: 0;
+  color: #173c57;
+  font-size: 16px;
+}
+
+.panelHeader p {
+  margin: 0;
+  padding: 5px 9px;
+  border: 1px solid #cee0eb;
+  border-radius: 4px;
+  color: #316c92;
+  background: #eef6fa;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) 210px;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e7eef3;
+  background: #f7fafc;
+}
+
+.filters label {
+  display: grid;
+  gap: 5px;
+  color: #60798b;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.filters input,
+.filters select,
+.formSelect {
+  width: 100%;
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid #d5e1e8;
+  border-radius: 5px;
+  color: #29495f;
+  background: #ffffff;
+  font-size: 11px;
+}
+
+.filters input::placeholder {
+  color: #9babb6;
+}
+
+.ruleName {
+  display: grid;
+  gap: 3px;
+}
+
+.ruleName span {
+  color: #8296a5;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.ruleName strong {
+  color: #24465d;
+  font-size: 11px;
+}
+
+.category {
+  display: inline-flex;
+  min-width: 42px;
+  min-height: 23px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: #315f7c;
+  background: #e6f0f6;
+  font-size: 10px;
+}
+
+.category[data-category='结蜡'] {
+  color: #95601f;
+  background: #fff0d8;
+}
+
+.category[data-category='供液'] {
+  color: #357650;
+  background: #e3f2e8;
+}
+
+.category[data-category='电气'] {
+  color: #765495;
+  background: #f0e9f7;
+}
+
+.category[data-category='压力'] {
+  color: #376c91;
+  background: #e4f0f8;
+}
+
+.expression {
+  color: #4a6678;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-size: 10px;
+  line-height: 1.5;
+  white-space: normal;
+}
+
+.hitCount {
+  color: #246c98;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.rulePanel :global(.ant-table) {
+  color: #405c6f;
+  font-size: 11px;
+}
+
+.rulePanel :global(.ant-table-thead > tr > th) {
+  color: #3a5568;
+  background: #f0f5f8;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.rulePanel :global(.ant-table-tbody > tr > td) {
+  border-bottom-color: #edf2f5;
+}
+
+.rulePanel :global(.ant-table-tbody > tr:hover > td) {
+  background: #f4f9fc;
+}
+
+.rulePanel :global(.ant-table-tbody > .disabledRow > td) {
+  color: #8b9aa4;
+  background: #f7f8f9;
+}
+
+.rulePanel :global(.ant-btn-link) {
+  padding-inline: 0;
+}
+
+.drawerFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.formSelect {
+  height: 32px;
+  font-size: 14px;
+}
+
+@media (max-width: 1280px) {
+  .filters {
+    grid-template-columns: minmax(280px, 1fr) 190px;
+  }
+}
