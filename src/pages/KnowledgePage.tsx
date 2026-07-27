@@ -13,18 +13,14 @@ import { KpiCard } from '../components/KpiCard'
 import { LoadablePanel } from '../components/LoadablePanel'
 import { PageHeader } from '../components/PageHeader'
 import { getKnowledgeData } from '../services/mockApi'
-import type {
-  KnowledgeCase,
-  KnowledgeData,
-  RuleItem,
-} from '../types/domain'
+import type { KnowledgeCase, KnowledgeData } from '../types/domain'
 import styles from './KnowledgePage.module.css'
 
 const categories: KnowledgeCase['category'][] = ['结蜡', '供液', '电气', '压力']
 
 interface ImportFields {
   title: string
-  category: RuleItem['category']
+  category: KnowledgeCase['category']
 }
 
 export default function KnowledgePage() {
