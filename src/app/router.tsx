@@ -1,6 +1,7 @@
 import { Navigate, type RouteObject } from 'react-router-dom'
 import { AppShell } from '../layout/AppShell'
 import { NotFoundPage } from '../pages/NotFoundPage'
+import OverviewPage from '../pages/OverviewPage'
 
 const placeholder = (title: string) => <h1>{title}</h1>
 
@@ -10,7 +11,7 @@ export const appRoutes: RouteObject[] = [
     element: <AppShell />,
     children: [
       { index: true, element: <Navigate to="/overview" replace /> },
-      { path: 'overview', element: placeholder('运行总览') },
+      { path: 'overview', element: <OverviewPage /> },
       { path: 'diagnosis', element: placeholder('异常诊断') },
       { path: 'optimization', element: placeholder('洗井优化') },
       { path: 'tasks', element: placeholder('任务派发') },
